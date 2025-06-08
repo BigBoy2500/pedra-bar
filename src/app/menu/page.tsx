@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import MenuLineItem from '@/components/MenuLineItem'
 import { menuData } from '@/data/menuData'
 
@@ -23,9 +21,7 @@ export default function Menu() {
 
   return (
     <main>
-      <Header />
-      
-      <div className="pt-24 pb-20">
+      <div className="pb-20">
         <div className="container">
           <h1 className="text-4xl font-serif font-bold text-primary text-center mb-12">
             Nosso Menu
@@ -57,8 +53,6 @@ export default function Menu() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </main>
   )
 } 

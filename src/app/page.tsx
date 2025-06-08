@@ -1,33 +1,6 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import MenuCard from '@/components/MenuCard'
-
-const featuredItems = [
-  {
-    name: 'Café Especial',
-    description: 'Nosso café especial da casa, torrado artesanalmente.',
-    price: 2.50,
-    image: '/images/coffee.jpg'
-  },
-  {
-    name: 'Bife à Portuguesa',
-    description: 'Bife grelhado com batata e arroz de feijão preto.',
-    price: 15.90,
-    image: '/images/steak.jpg'
-  },
-  {
-    name: 'Pudim de Ovos',
-    description: 'Sobremesa tradicional portuguesa com calda de caramelo.',
-    price: 4.50,
-    image: '/images/pudding.jpg'
-  }
-]
-
 export default function Home() {
   return (
     <main>
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-black/50 z-10" />
@@ -35,7 +8,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: "url('/images/hero-bg.png')" }}
         />
-        <div className="container relative z-20 text-center">
+        {/*<div className="container relative z-20 text-center">
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4">
             Pedra Bar
           </h1>
@@ -45,7 +18,7 @@ export default function Home() {
           <a href="/menu" className="btn btn-primary">
             Ver Menu
           </a>
-        </div>
+        </div>*/}
       </section>
 
       {/* About Section */}
@@ -64,8 +37,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   )
 } 

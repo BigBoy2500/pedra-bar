@@ -12,7 +12,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm shadow-sm z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-70 backdrop-blur-sm shadow-sm z-50">
       <div className="container py-0">
         <nav className="flex items-center justify-between h-24">
           <Link href="/" className="text-3xl md:text-5xl logo-font text-logo leading-none text-center block p-0 m-0">
@@ -37,8 +37,16 @@ export default function Header() {
             >
               Menu
             </Link>
+            <Link
+              href="/contact"
+              className={`relative text-headerText hover:text-primary transition-colors font-medium px-1 py-0.5 no-underline after:content-[''] after:block after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 ${
+                pathname === '/contact' ? 'text-primary after:w-full' : ''
+              }`}
+            >
+              Contacto
+            </Link>
             <div className="flex items-center space-x-4">
-              <SocialIcons className="text-headerText" />
+              <SocialIcons className="text-headerText" iconColor="text-primary"/>
             </div>
           </div>
 

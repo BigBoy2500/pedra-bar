@@ -57,6 +57,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 >
                   Menu
                 </Link>
+                <Link
+                  href="/contact"
+                  className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 ${
+                    pathname === '/contact' ? 'text-primary bg-gray-50' : ''
+                  }`}
+                  onClick={onClose}
+                >
+                  Contacto
+                </Link>
               </div>
 
               {/* Ícones sociais */}
