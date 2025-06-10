@@ -14,8 +14,8 @@ export default function Footer() {
               </div>
               <span className="font-bold text-white text-base mb-2">Onde estamos</span>
             </div>
-            <div className="text-white text-sm">Rua dos Ferreiros 634,</div>
-            <div className="text-white text-sm">4740-444 Forjães</div>
+            <div className="text-white text-sm">Av. Marcelino de Queiroz 708,</div>
+            <div className="text-white text-sm">4740-445 Forjães</div>
             <div className="text-white text-sm">Esposende</div>
           </div>
 
@@ -27,9 +27,9 @@ export default function Footer() {
               </div>
               <span className="font-bold text-gray-300 text-base mb-2 text-white">Horários</span>
             </div>
-            <div className="text-gray-200 text-sm"><span className="font-bold text-white">Segunda a Sexta: </span> 08h00–22h00</div>
-            <div className="text-gray-200 text-sm"><span className="font-bold text-white">Sábado: </span> 09h00–23h00</div>
-            <div className="text-gray-200 text-sm"><span className="font-bold text-white">Domingo: </span> 09h00–20h00</div>
+            <div className="text-gray-200 text-sm"><span className="font-bold text-white">Segunda a Sexta: </span> 10h30–2h00</div>
+            <div className="text-gray-200 text-sm"><span className="font-bold text-white">Sábado: </span> 10h30–2h00</div>
+            <div className="text-gray-200 text-sm"><span className="font-bold text-white">Domingo: </span> 10h30–2h00</div>
           </div>
 
           {/* Contactos */}
@@ -40,12 +40,10 @@ export default function Footer() {
               </div>
               <span className="font-bold text-gray-300 text-base mb-2 text-white">Contactos</span>
             </div>
-            <div className="font-bold text-sm text-white">Telefone</div>
-            <div className="text-gray-200 mb-1 text-sm">+351 123 456 789</div>
-            <div className="font-bold text-sm text-white">WhatsApp</div>
-            <div className="text-gray-200 mb-1 text-sm">+351 987 654 321</div>
+            <div className="font-bold text-sm text-white">Telemóvel</div>
+            <div className="text-gray-200 mb-1 text-sm">+351 933 834 749</div>
             <div className="font-bold text-sm text-white">Email</div>
-            <a href="mailto:info@pedrabar.pt" className="text-secondary font-semibold text-sm hover:underline">info@pedrabar.pt</a>
+            <a href="mailto:pedrabar25@gmail.com" className="text-secondary font-semibold text-sm hover:underline">pedrabar25@gmail.com</a>
           </div>
 
           {/* Estamos Online */}

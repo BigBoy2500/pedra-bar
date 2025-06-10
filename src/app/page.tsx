@@ -13,7 +13,7 @@ export default function Home() {
             Pedra Bar
           </h1>
           <p className="text-xl md:text-2xl mb-8">
-            O melhor café e comida tradicional portuguesa
+            O melhor café e comida tradicional portuguesa 
           </p>
           <a href="/menu" className="btn btn-primary">
             Ver Menu
@@ -29,10 +29,16 @@ export default function Home() {
               Sobre Nós
             </h2>
             <p className="text-lg text-gray-600">
-              O Pedra Bar é um espaço acolhedor onde tradição e modernidade se encontram. 
+              {/*O Pedra Bar é um espaço acolhedor onde tradição e modernidade se encontram. 
               Oferecemos os melhores cafés e pratos tradicionais portugueses, preparados 
               com ingredientes frescos e muito carinho. Venha nos visitar e desfrutar de 
-              uma experiência gastronômica única.
+              uma experiência gastronômica única.*/}
+              <p className="text-lg font-semibold text-gray-600">O Pedra Bar está de volta!</p>
+              Um espaço que marcou gerações, encontros e histórias 
+              na nossa freguesia, regressa agora com nova vida, mas com a mesma essência de sempre: 
+              um ambiente acolhedor, bons petiscos, bons copos e, acima de tudo, boa companhia.
+              Acreditamos na força das memórias e no valor das tradições. Por isso, renovámos o espaço, refrescámos a carta, 
+              mas mantivemos aquilo que realmente importa — o espírito que sempre fez deste bar um ponto de encontro único.
             </p>
           </div>
         </div>

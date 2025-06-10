@@ -21,9 +21,9 @@ export default function Menu() {
 
   return (
     <main>
-      <div className="pb-20">
+      <div className="pt-32 pb-20">
         <div className="container">
-          <h1 className="text-4xl font-serif font-bold text-primary text-center mb-12">
+          <h1 className="text-4xl font-bold text-primary text-center mb-12">
             Nosso Menu
           </h1>
 
