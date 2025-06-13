@@ -1,6 +1,11 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contacto - Pedra Bar',
+}
 
 export default function ContactPage() {
   return (
@@ -19,7 +24,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-lg text-gray-700">Endereço</h3>
                 <p className="text-gray-600">Av. Marcelino de Queiroz 708</p>
-                <p className="text-gray-600">4740-445 Forjães</p>
+                <p className="text-gray-600">4740-444 Forjães</p>
                 <p className="text-gray-600">Esposende</p>
               </div>
             </div>

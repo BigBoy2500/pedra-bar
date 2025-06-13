@@ -35,7 +35,7 @@ export default function SocialIcons({ className = '', iconColor = 'text-gray-600
       {/* Instagram */}
       <Link
         href="https://instagram.com/pedrabar_"
-        //target="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className={`${iconColor} ${iconBaseClasses}`}
       >

@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="font-bold text-white text-base mb-2">Onde estamos</span>
             </div>
             <div className="text-white text-sm">Av. Marcelino de Queiroz 708,</div>
-            <div className="text-white text-sm">4740-445 Forjães</div>
+            <div className="text-white text-sm">4740-444 Forjães</div>
             <div className="text-white text-sm">Esposende</div>
           </div>
 

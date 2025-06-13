@@ -35,14 +35,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="md:hidden fixed top-24 left-0 w-full bg-white overflow-hidden shadow-lg z-40"
+            className={`md:hidden fixed top-24 left-0 w-full bg-white overflow-hidden shadow-lg z-40 ${
+              pathname === '/' ? 'bg-opacity-70 backdrop-blur-sm' : ''
+            }`}
           >
             <div className="px-4 pt-4 pb-6 space-y-6">
               <div className="space-y-2">
                 <Link
                   href="/"
                   className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 ${
-                    pathname === '/' ? 'text-primary bg-gray-50' : ''
+                    pathname === '/' ? 'text-primary bg-gray-50 bg-opacity-70' : ''
                   }`}
                   onClick={onClose}
                 >
@@ -51,7 +53,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <Link
                   href="/menu"
                   className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 ${
-                    pathname === '/menu' ? 'text-primary bg-gray-50' : ''
+                    pathname === '/menu' ? 'text-primary bg-gray-50 bg-opacity-70' : ''
                   }`}
                   onClick={onClose}
                 >
@@ -60,7 +62,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <Link
                   href="/contacto"
                   className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 ${
-                    pathname === '/contacto' ? 'text-primary bg-gray-50' : ''
+                    pathname === '/contacto' ? 'text-primary bg-gray-50 bg-opacity-70' : ''
                   }`}
                   onClick={onClose}
                 >

@@ -10,7 +10,8 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 const unifraktur = UnifrakturCook({ subsets: ['latin'], weight: '700', variable: '--font-unifraktur' })
 
 export const metadata: Metadata = {
-  title: 'Pedra Bar - Café & Restaurante',
+  metadataBase: new URL('https://www.pedrabar.pt'),
+  title: 'Pedra Bar - Café & Bar',
   description: 'Um espaço acolhedor para desfrutar de ótimos cafés e refeições em Forjães.',
   keywords: [
     'café', 'restaurante', 'pedra bar', 'forjães', 'barcelos',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.pedrabar.pt',
-    title: 'Pedra Bar - Café & Restaurante',
+    title: 'Pedra Bar - Café & Bar',
     description: 'Café e gastronomia em Forjães com ambiente rústico e acolhedor.',
     siteName: 'Pedra Bar',
     locale: 'pt_PT',
@@ -51,16 +52,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pedra Bar - Café & Restaurante',
+    title: 'Pedra Bar - Café & Bar',
     description: 'Café e gastronomia em Forjães com ambiente rústico e acolhedor.',
     images: ['/og-image.png'],
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  themeColor: '#1a3321',
   applicationName: 'Pedra Bar',
   appleWebApp: {
     capable: true,
@@ -70,6 +65,13 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: true,
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#1a3321',
 }
 
 export default function RootLayout({

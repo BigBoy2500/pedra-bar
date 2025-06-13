@@ -12,7 +12,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-70 backdrop-blur-sm shadow-sm z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-70 backdrop-blur-sm shadow-lg z-50">
       <div className="container py-0">
         <nav className="flex items-center justify-between h-24">
           <Link href="/" className="text-3xl md:text-5xl logo-font text-logo leading-none text-center block p-0 m-0">

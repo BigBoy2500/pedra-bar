@@ -61,7 +61,7 @@ export default function Menu() {
 export default function Menu() {
   return (
     <main>
-      <div className="pt-32 pb-20">
+      <div className="py-40">
         <div className="container text-center">
           <h1 className="text-4xl font-bold text-primary mb-12 mt-12">
             Em breve disponível...
