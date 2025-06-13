@@ -4,6 +4,7 @@ import { UnifrakturCook } from 'next/font/google'
 import './globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import CanonicalTag from '../components/CanonicalTag'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
@@ -82,7 +83,38 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <head>
-        <link rel="canonical" href="https://www.pedrabar.pt" />
+        <CanonicalTag />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Restaurant",
+            "name": "Pedra Bar",
+            "image": "https://www.pedrabar.pt/og-image.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Av. Marcelino Queiroz 708",
+              "addressLocality": "Forjães",
+              "postalCode": "4740-444",
+              "addressCountry": "PT"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 41.615905121026,
+              "longitude": -8.749220455260089
+            },
+            "telephone": "+351933834749",
+            "url": "https://www.pedrabar.pt",
+            "servesCuisine": ["Portuguese", "Café", "Bar"],
+            "priceRange": "€",
+            "openingHours": [
+              "Mo-Sa 10:30-02:00",
+              "Su 10:30-02:00"
+            ],
+            "sameAs": [
+                "https://www.instagram.com/pedrabar_"
+              ]
+          })
+        }} />
       </head>
       <body className={`${inter.variable} ${playfair.variable} ${unifraktur.variable} font-sans`}>
         <Header />
