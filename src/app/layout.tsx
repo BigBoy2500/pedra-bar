@@ -18,13 +18,19 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Pedra Bar' }],
   robots: 'index, follow',
+  manifest: '/manifest.json',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
     other: [
-      { rel: 'icon', url: '/favicon-32x32.png', sizes: '32x32' },
-      { rel: 'icon', url: '/favicon-96x96.png', sizes: '96x96' },
-      { rel: 'icon', url: '/favicon-192x192.png', sizes: '192x192' },
-      { rel: 'apple-touch-icon', url: '/apple-touch-icon.png', sizes: '180x180' },
+      { rel: 'android-chrome-192x192', url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { rel: 'android-chrome-512x512', url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ]
   },
   openGraph: {
@@ -36,15 +42,34 @@ export const metadata: Metadata = {
     locale: 'pt_PT',
     images: [
       {
-        url: '/og-image.png', // coloca esta imagem em /public
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Fachada do Pedra Bar',
       }
     ]
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pedra Bar - Café & Restaurante',
+    description: 'Café e gastronomia em Forjães com ambiente rústico e acolhedor.',
+    images: ['/og-image.png'],
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   themeColor: '#1a3321',
   applicationName: 'Pedra Bar',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Pedra Bar',
+  },
+  formatDetection: {
+    telephone: true,
+  },
 }
 
 export default function RootLayout({
@@ -54,6 +79,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
+      <head>
+        <link rel="canonical" href="https://www.pedrabar.pt" />
+      </head>
       <body className={`${inter.variable} ${playfair.variable} ${unifraktur.variable} font-sans`}>
         <Header />
         <main>{children}</main>
