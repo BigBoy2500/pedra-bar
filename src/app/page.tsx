@@ -34,7 +34,7 @@ export default function Home() {
               com ingredientes frescos e muito carinho. Venha nos visitar e desfrutar de 
               uma experiência gastronômica única.*/}
               Um espaço que marcou gerações, encontros e histórias 
-              na nossa freguesia, regressa agora com nova vida, mas com a mesma essência de sempre: 
+              na freguesia de Forjães, regressa agora com nova vida, mas com a essência de sempre: 
               um ambiente acolhedor, bons petiscos, bons copos e, acima de tudo, boa companhia.
               Acreditamos na força das memórias e no valor das tradições. Por isso, renovámos o espaço, refrescámos a carta, 
               mas mantivemos aquilo que realmente importa — o espírito que sempre fez deste bar um ponto de encontro único.

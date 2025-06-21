@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Pedra Bar - Café & Bar',
   description: 'Um espaço acolhedor para desfrutar de ótimos cafés e refeições em Forjães.',
   keywords: [
-    'café', 'restaurante', 'pedra bar', 'forjães', 'barcelos',
+    'café', 'restaurante', 'pedra bar', 'forjães', 'barcelos', 'esposende', 'bar',
     'petiscos', 'bebidas', 'refeições', 'esplanada', 'comida caseira'
   ],
   authors: [{ name: 'Pedra Bar' }],
@@ -83,7 +83,8 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <head>
-        <CanonicalTag />
+        <meta name="geo.region" content="PT-03" />
+        <meta name="geo.placename" content="Forjães" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
