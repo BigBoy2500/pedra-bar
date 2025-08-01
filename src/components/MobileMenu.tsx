@@ -60,6 +60,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   Menu
                 </Link>
                 <Link
+                  href="/eventos"
+                  className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 ${
+                    pathname === '/eventos' ? 'text-primary bg-gray-50 bg-opacity-70' : ''
+                  }`}
+                  onClick={onClose}
+                >
+                  Eventos
+                </Link>
+                <Link
                   href="/contacto"
                   className={`block px-4 py-3 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 ${
                     pathname === '/contacto' ? 'text-primary bg-gray-50 bg-opacity-70' : ''

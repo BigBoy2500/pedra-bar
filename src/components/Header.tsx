@@ -38,6 +38,14 @@ export default function Header() {
               Menu
             </Link>
             <Link
+              href="/eventos"
+              className={`relative text-headerText hover:text-primary transition-colors font-medium px-1 py-0.5 no-underline after:content-[''] after:block after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 ${
+                pathname === '/eventos' ? 'text-primary after:w-full' : ''
+              }`}
+            >
+              Eventos
+            </Link>
+            <Link
               href="/contacto"
               className={`relative text-headerText hover:text-primary transition-colors font-medium px-1 py-0.5 no-underline after:content-[''] after:block after:w-0 after:h-0.5 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0 ${
                 pathname === '/contacto' ? 'text-primary after:w-full' : ''
