@@ -83,7 +83,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div className="flex justify-center pt-6 border-t border-gray-200">
                 <div className="flex space-x-6">
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61578167319276"
                     className="text-gray-700 hover:text-primary transition-colors"
                     onClick={onClose}
                   >
