@@ -36,3 +36,11 @@
   }
 } 
 
+@font-face {
+  font-family: "Obra Letra";
+  src: url("/fonts/ObraLetra-Regular.woff2") format("woff2"),
+       url("/fonts/ObraLetra-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+

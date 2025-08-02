@@ -83,6 +83,10 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href='https://fonts.googleapis.com/css?family=Pirata One' rel='stylesheet' />
+
         <meta name="geo.region" content="PT-03" />
         <meta name="geo.placename" content="Forjães" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
