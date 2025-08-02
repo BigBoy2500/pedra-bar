@@ -13,7 +13,7 @@ export default function SocialIcons({ className = '', iconColor = 'text-gray-600
     <div className={`flex items-center space-x-4 ${className}`}>
       {/* Facebook */}
       <Link
-        href="#"
+        href="https://www.facebook.com/profile.php?id=61578167319276"
         target="_blank"
         rel="noopener noreferrer"
         className={`${iconColor} ${iconBaseClasses}`}
