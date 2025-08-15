@@ -26,6 +26,14 @@ export default function EventosPage() {
 
   const events = [
     {
+      title: "Paulo Alves ao vivo no Pedra Bar",
+      image: "/images/concerto-paulo-alves.jpg",
+      date: "15 de agosto, 2025",
+      isoDate: "2025-08-15",
+      time: "A partir das 21:00",
+      description: "Sexta-feira é noite de música ao vivo no Pedra Bar! Vem sentir a energia e o talento de Paulo Alves, num concerto especial em Forjães – Esposende."
+    },
+    {
       title: "The Project no Pedra Bar",
       image: "/images/concerto-the-project.jpeg",
       date: "2 de agosto, 2025",
