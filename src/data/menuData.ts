@@ -284,6 +284,51 @@ export const menuData = {
       },
     ],
   },
+  vinhos: {
+    label: 'Vinhos',
+    items: [
+      {
+        name: 'Vidigueira Tinto',
+        description: '',
+        price: 9.50,
+      },
+      {
+        name: 'Vidigueira Branco',
+        description: '',
+        price: 9.50,
+      },
+      {
+        name: 'Monte Ermos Tinto',
+        description: '',
+        price: 9.00,
+      },
+      {
+        name: 'Vila Real Tinto (Reserva)',
+        description: '',
+        price: 8.50,
+      },
+      {
+        name: 'Encostas da Arrabida Maduro Tinto',
+        description: '',
+        price: 6.00,
+      },
+      {
+        name: 'Encostas da Cesta Verde',
+        description: '',
+        price: 8.00,
+      },
+      {
+        name: 'Bordoa Verde',
+        description: '',
+        price: 6.50,
+      },
+      {
+        name: 'Vinho a Copo',
+        description: '',
+        price: 1.30,
+      },
+    ],
+  },
   longDrinks: {
     label: 'Long Drinks',
     subcategories: {
@@ -318,6 +363,7 @@ export const menuData = {
         label: 'Outros',
         items: [
           { name: 'Campari Laranja / Tonic / Spritz', price: 3.50 },
+          { name: 'Aperol Laranja / Tonic / Spritz', price: 4.00 },
           { name: 'Pisang Ambon', price: 3.50 },
           { name: 'Tequila Sunrise', price: 5.00 },
           { name: 'Sex on the beach', price: 5.00 },
