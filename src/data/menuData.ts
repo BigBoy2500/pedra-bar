@@ -3,19 +3,24 @@ export const menuData = {
     label: 'Pratos',
     items: [
       {
+        name: 'Francesinha s/ ovo',
+        description: 'Novidade!',
+        price: 9.50,
+      },
+      {
+        name: 'Francesinha c/ ovo',
+        description: 'Novidade!',
+        price: 10.00,
+      },
+      {
         name: 'Prego no prato',
         description: '',
-        price: 6.50,
+        price: 8.50,
       },
       {
         name: 'Panado no prato',
         description: '',
         price: 5.00,
-      },
-      {
-        name: 'Féveras no prato c/ ovo',
-        description: '',
-        price: 4.50,
       },
       {
         name: 'Alheira',
@@ -24,11 +29,6 @@ export const menuData = {
       },
       {
         name: 'Omelete',
-        description: '',
-        price: 5.00,
-      },
-      {
-        name: 'Feijão fradinho c/atum e ovo',
         description: '',
         price: 5.00,
       },
@@ -449,7 +449,7 @@ export const menuData = {
       {
         name: 'Bourbon',
         description: '',
-        price: 7.00,
+        price: 6.00,
       },
     ],
   },
