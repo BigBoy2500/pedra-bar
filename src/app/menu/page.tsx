@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Head from 'next/head'
-import { menuData, isItemNew } from '@/data/menuData'
+import { menuData, isItemNew, type MenuItem, type SubcategoryItem } from '@/data/menuData'
 
 type MenuCategoryKey = keyof typeof menuData
 
@@ -177,7 +177,7 @@ export default function Menu () {
                 if ('subcategories' in category) {
                   return (
                     <div className="space-y-8">
-                      {Object.entries(category.subcategories).map(([key, sub]) => (
+                      {category.subcategories && Object.entries(category.subcategories).map(([key, sub]) => (
                         <div key={key}>
                           <h3
                             className="text-center mb-3 font-bold"
@@ -286,7 +286,7 @@ export default function Menu () {
                     ))}
                     */}
 
-                    {category.items.map((item, index) => (
+                    {category.items && category.items.map((item, index) => (
                       <div key={index} className="flex items-center py-2">
                         <div className="flex items-center">
                           <span

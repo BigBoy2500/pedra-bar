@@ -1,3 +1,20 @@
+// Tipos para os itens do menu
+export interface MenuItem {
+  name: string;
+  description: string;
+  price: number;
+  addedDate?: string; // Campo opcional para data de adição
+}
+
+export interface SubcategoryItem {
+  name: string;
+  price: number;
+  addedDate?: string; // Campo opcional para data de adição
+}
+
+// Tipo para itens que podem ter addedDate
+export type ItemWithAddedDate = MenuItem | SubcategoryItem;
+
 // Função para verificar se um item é novo (dentro de 2 semanas)
 export const isItemNew = (addedDate?: string): boolean => {
   if (!addedDate) return false;
@@ -9,7 +26,18 @@ export const isItemNew = (addedDate?: string): boolean => {
   return added > twoWeeksAgo;
 };
 
-export const menuData = {
+export const menuData: {
+  [key: string]: {
+    label: string;
+    items?: MenuItem[];
+    subcategories?: {
+      [key: string]: {
+        label: string;
+        items: SubcategoryItem[];
+      };
+    };
+  };
+} = {
   pratos: {
     label: 'Pratos',
     items: [
