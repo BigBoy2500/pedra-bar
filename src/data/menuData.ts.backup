@@ -1,35 +1,16 @@
-// Função para verificar se um item é novo (dentro de 2 semanas)
-export const isItemNew = (addedDate?: string): boolean => {
-  if (!addedDate) return false;
-  
-  const added = new Date(addedDate);
-  const now = new Date();
-  const twoWeeksAgo = new Date(now.getTime() - (14 * 24 * 60 * 60 * 1000));
-  
-  return added > twoWeeksAgo;
-};
-
 export const menuData = {
   pratos: {
     label: 'Pratos',
     items: [
       {
         name: 'Francesinha s/ ovo',
-        description: '',
+        description: 'Novidade!',
         price: 9.50,
-        addedDate: '2025-09-13',
       },
       {
         name: 'Francesinha c/ ovo',
-        description: '',
+        description: 'Novidade!',
         price: 10.00,
-        addedDate: '2025-09-13',
-      },
-      {
-        name: 'Cachorro especial',
-        description: '',
-        price: 6.30,
-        addedDate: '2025-09-13',
       },
       {
         name: 'Prego no prato',
@@ -477,11 +458,6 @@ export const menuData = {
     items: [
       {
         name: 'Croft',
-        description: '',
-        price: 2.50,
-      },
-      {
-        name: 'Macieira',
         description: '',
         price: 2.50,
       },

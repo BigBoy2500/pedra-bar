@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Head from 'next/head'
-import { menuData } from '@/data/menuData'
+import { menuData, isItemNew } from '@/data/menuData'
 
 type MenuCategoryKey = keyof typeof menuData
 
@@ -190,6 +190,7 @@ export default function Menu () {
                             {sub.label}
                           </h3>
                           <div className="space-y-2 sm:space-y-3">
+                            {/*
                             {sub.items.map((item, index) => (
                               <div key={index} className="flex items-center py-2">
                                 <span
@@ -215,6 +216,39 @@ export default function Menu () {
                                 </span>
                               </div>
                             ))}
+                            */}
+                            {sub.items.map((item, index) => (
+                              <div key={index} className="flex items-center py-2">
+                                <div className="flex items-center">
+                                  <span
+                                    className="font-medium"
+                                    style={{
+                                      fontFamily: "Obra Letra",
+                                      color: '#1f3228',
+                                      fontSize: '0.95rem',
+                                    }}
+                                  >
+                                    {item.name}
+                                  </span>
+                                  {isItemNew(item.addedDate) && (
+                                    <span className="ml-2 bg-[#1f3228] text-white text-xs px-2 py-1 rounded-full font-bold">
+                                      NOVIDADE
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="border-b border-dotted flex-grow mx-2 sm:mx-3" style={{ borderColor: '#1f3228' }}></div>
+                                <span
+                                  className="font-bold"
+                                  style={{
+                                    fontFamily: "Obra Letra",
+                                    color: '#1f3228',
+                                    fontSize: '0.95rem',
+                                  }}
+                                >
+                                  {item.price === 0 ? '€' : `${item.price.toFixed(2)}€`}
+                                </span>
+                              </div>
+                            ))}
                           </div>
                         </div>
                       ))}
@@ -224,6 +258,7 @@ export default function Menu () {
                 // Caso contrário, mostrar a lista de itens normal
                 return (
                   <div className="space-y-2 sm:space-y-3">
+                    {/*
                     {category.items.map((item, index) => (
                       <div key={index} className="flex items-center py-2">
                         <span
@@ -236,6 +271,40 @@ export default function Menu () {
                         >
                           {item.name}
                         </span>
+                        <div className="border-b border-dotted flex-grow mx-2 sm:mx-3" style={{ borderColor: '#1f3228' }}></div>
+                        <span
+                          className="font-bold"
+                          style={{
+                            fontFamily: "Obra Letra",
+                            color: '#1f3228',
+                            fontSize: '0.95rem',
+                          }}
+                        >
+                          {item.price === 0 ? '€' : `${item.price.toFixed(2)}€`}
+                        </span>
+                      </div>
+                    ))}
+                    */}
+
+                    {category.items.map((item, index) => (
+                      <div key={index} className="flex items-center py-2">
+                        <div className="flex items-center">
+                          <span
+                            className="font-medium"
+                            style={{
+                              fontFamily: "Obra Letra",
+                              color: '#1f3228',
+                              fontSize: '0.95rem',
+                            }}
+                          >
+                            {item.name}
+                          </span>
+                          {isItemNew(item.addedDate) && (
+                            <span className="ml-2 bg-[#1f3228] text-white text-xs px-2 py-1 rounded-full font-bold">
+                              NOVIDADE
+                            </span>
+                          )}
+                        </div>
                         <div className="border-b border-dotted flex-grow mx-2 sm:mx-3" style={{ borderColor: '#1f3228' }}></div>
                         <span
                           className="font-bold"
