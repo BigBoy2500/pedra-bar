@@ -54,7 +54,7 @@ export const menuData: {
         addedDate: '2025-09-13',
       },
       {
-        name: 'Cachorro especial',
+        name: 'Cachorro à Pedra Bar',
         description: '',
         price: 6.30,
         addedDate: '2025-09-13',
