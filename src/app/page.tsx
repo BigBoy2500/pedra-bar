@@ -28,7 +28,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-primary mb-10">
               Sobre Nós
             </h2>
-            <p className="text-lg font-semibold text-gray-600">O Pedra Bar está de volta!</p><p className="text-lg font-semt-lg text-gray-600">
+            <p className="text-lg font-semibold text-gray-600">O Pedra Bar está de volta!!</p><p className="text-lg font-semt-lg text-gray-600">
               {/*O Pedra Bar é um espaço acolhedor onde tradição e modernidade se encontram. 
               Oferecemos os melhores cafés e pratos tradicionais portugueses, preparados 
               com ingredientes frescos e muito carinho. Venha nos visitar e desfrutar de 
