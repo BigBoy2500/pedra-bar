@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    experimental: {
+      // undici (dependência do @vercel/blob) usa sintaxe que o webpack do Next 14.1 não consegue empacotar
+      serverComponentsExternalPackages: ['@vercel/blob', 'undici'],
+    },
     async redirects() {
       return [
         {
