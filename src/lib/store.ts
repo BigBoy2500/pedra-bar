@@ -24,7 +24,18 @@ export function canWrite(): boolean {
 
 async function read<T>(key: Key): Promise<T | null> {
   const r = redis()
-  if (r) return (await r.get<T>(key)) ?? null
+  if (r) {
+    const t0 = Date.now()
+    try {
+      const v = (await r.get<T>(key)) ?? null
+      if (v === null) console.warn(`[store] "${key}" não existe no Redis; a usar valores por defeito`)
+      return v
+    } catch (e) {
+      console.error(`[store] leitura de "${key}" falhou após ${Date.now() - t0}ms:`, e instanceof Error ? e.message : e)
+      throw e
+    }
+  }
+  if (!isDev) console.error(`[store] Redis não configurado (faltam KV_REST_API_URL/TOKEN); a ler "${key}" dos valores por defeito`)
   if (isDev) {
     try {
       return JSON.parse(await fs.readFile(path.join(DATA_DIR, `${key}.json`), 'utf8')) as T
@@ -38,7 +49,13 @@ async function read<T>(key: Key): Promise<T | null> {
 async function write(key: Key, value: unknown): Promise<void> {
   const r = redis()
   if (r) {
-    await r.set(key, value)
+    try {
+      await r.set(key, value)
+      console.log(`[store] "${key}" gravado (${Array.isArray(value) ? value.length : '?'} entradas)`)
+    } catch (e) {
+      console.error(`[store] escrita de "${key}" falhou:`, e instanceof Error ? e.message : e)
+      throw e
+    }
     return
   }
   if (isDev) {
