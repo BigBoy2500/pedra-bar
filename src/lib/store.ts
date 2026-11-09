@@ -13,7 +13,8 @@ const DATA_DIR = path.join(process.cwd(), '.data')
 function redis(): Redis | null {
   const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL
   const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN
-  return url && token ? new Redis({ url, token }) : null
+  // no-store: evita a Data Cache do Next devolver respostas antigas do Redis.
+  return url && token ? new Redis({ url, token, cache: 'no-store' }) : null
 }
 
 /** Pode gravar? Redis configurado, ou modo dev (ficheiro local). */
@@ -48,14 +49,12 @@ async function write(key: Key, value: unknown): Promise<void> {
   throw new Error('Armazenamento não configurado (falta ligar o Upstash Redis na Vercel).')
 }
 
+// Os valores por defeito só entram quando a chave NÃO existe. Se o Redis falhar,
+// o erro propaga: a página ISR mantém a última versão boa e o admin não grava
+// por cima dos preços novos com dados antigos.
 export async function getMenu(): Promise<MenuCategory[]> {
-  try {
-    const data = await read<MenuCategory[]>('menu')
-    return Array.isArray(data) && data.length > 0 ? data : defaultMenu
-  } catch (e) {
-    console.error('getMenu falhou, a usar fallback', e)
-    return defaultMenu
-  }
+  const data = await read<MenuCategory[]>('menu')
+  return Array.isArray(data) ? data : defaultMenu
 }
 
 export async function setMenu(menu: MenuCategory[]): Promise<void> {
@@ -63,14 +62,8 @@ export async function setMenu(menu: MenuCategory[]): Promise<void> {
 }
 
 export async function getEventos(): Promise<Evento[]> {
-  let list: Evento[]
-  try {
-    const data = await read<Evento[]>('eventos')
-    list = Array.isArray(data) ? data : defaultEventos
-  } catch (e) {
-    console.error('getEventos falhou, a usar fallback', e)
-    list = defaultEventos
-  }
+  const data = await read<Evento[]>('eventos')
+  const list = Array.isArray(data) ? data : defaultEventos
   return [...list].sort((a, b) => b.date.localeCompare(a.date))
 }
 
